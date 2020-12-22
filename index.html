@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Post Box</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
@@ -10,15 +10,19 @@
 
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+	<script type="text/javascript" src="js/posts.js?v=<?php echo time(); ?>"></script>
 </head>
 <body>
 
 <div class="container">
 
 <div class="page-header">
-	<a href="login.html"><button class="btn btn-primary pull-right" type="button">Logout</button> </a>
-	
-    <h1> <small>Create a new post</small></h1>
+	<a href="login.html">
+	<button class="btn btn-primary pull-right" type="button">Logout</button>
+	</a>
+    <h1>Post Box <small>Create a new post</small></h1>
 </div>
 
 <!-- Comment Box - START -->
@@ -27,12 +31,13 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-info">
                 <div class="panel-body">
-                    <textarea placeholder="Write your post" class="pb-cmnt-textarea"></textarea>
+                    <textarea placeholder="Write your comment here!" class="pb-cmnt-textarea" id="description"></textarea>
                     <form class="form-inline">
 						<a href="post.html">
-						<button class="btn btn-primary pull-center" type="button">See All Post</button>
-                        <button class="btn btn-primary pull-center" type="button">Share</button>
-                    </form>
+						<button class="btn btn-primary pull-left" type="button">See All Post</button>
+                        </a>
+						    <button class="btn btn-primary pull-right" type="button" id="addpost">Share</button>
+					</form>
                 </div>
             </div>
         </div>
